@@ -1,0 +1,85 @@
+:root {
+   /* colors */
+   /* primary*/
+   --clr-soft-red: hsl(10, 79%, 65%);
+   --clr-cyan: hsl(186, 34%, 60%);
+   
+
+    /* neutral */
+    --clr-dark-brown: hsl(25, 47%, 15%);
+    --clr-medium-brown: hsl(28, 10%, 53%);
+    --clr-cream: hsl(27, 66%, 92%);
+    --clr-very-pale-orange: hsl(33, 100%, 98%);
+   
+ 
+   /* typography */
+   /* fonts */
+   --ff-primary: "DM Sans", sans-serif;
+   --fw-400: 400; /* base */
+   --fw-700: 700; 
+   --fs-18: 1.125rem;
+   --fs-custom: 0.6rem;
+}  
+
+
+html {
+   height: 100%;
+}
+
+body {
+   min-height: 100%;
+}
+
+p, h2 {
+   line-height: 1.4;
+}
+
+
+body {
+   display: flex;
+   min-height: 100vh;
+   justify-content: center;
+   align-items: center;
+   font-family: var(--ff-primary);
+   font-size: var(--fs-18);
+   font-weight: var(--fw-400);
+   background-color: var(--clr-cream);
+}
+
+/*---------------------Mobile layout-------------------------*/
+.grid__container {
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-areas:
+       'header'
+       'main'
+       'attribution';
+   justify-items: center;
+   width: 17rem;
+}
+
+/* style 1st component - mobile */
+
+/* style 2nd component - mobile */
+
+
+/* style 3rd component - mobile */
+/* 3rd component is styled in external file */
+
+/*---------------------Desktop layout-------------------------*/
+@media screen and (min-width: 48rem) {
+
+ 
+/* style 1st component - desktop */
+
+
+/*style 2nd component - desktop */
+
+
+/* style 3rd component - mobile */
+/* 3rd component is styled in external file */
+}
+
+
+/*---------grid area name--------------*/
+
