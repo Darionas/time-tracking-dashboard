@@ -69,6 +69,10 @@ body {
     border: 2px solid green;
 }
 
+.activity__previous {
+    text-transform: capitalize;
+}
+
 /* style 3rd component - mobile */
 /* 3rd component is styled in external file */
 
