@@ -61,7 +61,13 @@ body {
 /* style 1st component - mobile */
 
 /* style 2nd component - mobile */
+.user__data {
+    border: 2px solid blue;
+}
 
+.user__activity-period {
+    border: 2px solid green;
+}
 
 /* style 3rd component - mobile */
 /* 3rd component is styled in external file */
