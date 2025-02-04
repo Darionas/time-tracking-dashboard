@@ -1,8 +1,12 @@
 "use strict";
+const day = document.getElementById('day');
+const week = document.getElementById('week');
+const month = document.getElementById('month');
 let activities = document.getElementById('activities');
 let period = 'day';
 let periodHTML = 'daily';
 updateActivities();
+day === null || day === void 0 ? void 0 : day.classList.add('colorPeriod');
 document.body.addEventListener('click', (e) => {
     const target = e.target;
     if (target.id === "day" || target.id === "week" || target.id === "month") {
@@ -24,7 +28,7 @@ function updateActivities() {
             let previousHours = previous === 1 ? 'hr' : 'hrs';
             let template = `
                     <div class="activity">
-                        <div class="activity__title">
+                        <div class="activity__title ${activityTitle}">
                             <img class="activity__image" src="images/icon-${activityTitle}.svg" alt="${activityTitle}"/>
                         </div>
                         <div class="activity__data">

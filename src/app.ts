@@ -1,8 +1,12 @@
+const day = document.getElementById('day');
+const week = document.getElementById('week');
+const month = document.getElementById('month');
 let activities = document.getElementById('activities') as HTMLElement;
 let period: string = 'day';
 let periodHTML: string = 'daily';
 updateActivities();
-
+//console.log(day);
+day?.classList.add('colorPeriod');
 
 document.body.addEventListener('click', (e: MouseEvent) => {
     const target = e.target as HTMLElement;
@@ -35,10 +39,10 @@ function updateActivities() {
                 let previous: number = data.timeframes[periodHTML].previous;
                 let currentHours: string = current === 1 ? 'hr' : 'hrs';
                 let previousHours: string = previous === 1 ? 'hr' : 'hrs';
-          
+                
                 let template = `
                     <div class="activity">
-                        <div class="activity__title">
+                        <div class="activity__title ${activityTitle}">
                             <img class="activity__image" src="images/icon-${activityTitle}.svg" alt="${activityTitle}"/>
                         </div>
                         <div class="activity__data">
