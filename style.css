@@ -62,7 +62,7 @@ body {
        'main'
        'attribution';
    justify-items: center;
-   width: 100%;
+   min-width: 21rem;
    border: 2px solid red;
 }
 
@@ -109,6 +109,7 @@ body {
     background-color: var(--clr-blue);
     border-radius: 0.7rem;
     padding: 2rem;
+    justify-content: center;
    /*  overflow: hidden !important; */
     z-index: 1;
     /* height: 10rem; */
@@ -125,7 +126,7 @@ body {
 }
 
 .user__data-notice {
-    color: var(--clr-desaturated-blue);
+    color: var(--clr-pale-blue);
     justify-self: start;
     align-self: end;
     font-size: 1rem;
@@ -142,7 +143,7 @@ body {
 
 .user__activity-period {
     display: grid;
-    grid-template-rows: 3fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
         'day week month';
     color: var(--clr-desaturated-blue);
@@ -161,6 +162,14 @@ body {
 
 #activities {
     display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'activity__work'
+        'activity__play'
+        'activity__study'
+        'activity__exercise'
+        'activity__social'
+        'activity__self-care';
     border: 2px solid yellow;
     gap: 1.5rem;
 }
@@ -246,7 +255,7 @@ body {
 }
 
 .activity__current {
-   font-size: 1.7rem;
+   font-size: 1.8vw;
    align-self: start;
    margin-top: -1rem;
    /* border: 2px solid white; */
@@ -268,12 +277,86 @@ body {
 /*---------------------Desktop layout-------------------------*/
 @media screen and (min-width: 48rem) {
 
+ .grid__container {
+    width: 60rem;
+ }
  
 /* style 1st component - desktop */
 
 
 /*style 2nd component - desktop */
+.main {
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-areas:
+        'user activities';
+    gap: 1.5rem;
+    width: 100%;
+    border: 2px solid white;
+}
 
+.user {
+    width: 12rem;
+    justify-self: end;
+}
+
+.user__data {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'user__data-image'
+        'user__data-notice'
+        'user__data-name';
+}
+
+.user__data-image {
+    justify-self: start;
+}
+
+.user__data-notice {
+   font-size: 0.7rem;
+}
+
+.user__data-name {
+    font-size: 1.9rem;
+}
+
+.user__activity-period {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'day'
+        'week'
+        'month';
+    justify-items: start;
+    padding-left: 2rem;
+}
+
+#activities {
+    grid-template-columns: 3fr;
+    grid-template-areas:
+        'activity__work activity__play activity__study'
+        'activity__exercise activity__social activity__self-care';
+    width: 100%;
+    margin-top: 1rem;
+    justify-self: start;
+}
+
+.activity__container {
+    max-width: 14rem;
+    /* border: 2px solid white; */
+}
+
+.activity__data {
+    grid-template-columns: 2fr;
+    grid-template-areas:
+        'activity__desc activity__info'
+        'activity__current .'
+        'activity__previous .';
+    /* width: 15rem; */
+}
+
+.activity__previous {
+    justify-self: start;
+}
 
 /* style 3rd component - mobile */
 /* 3rd component is styled in external file */
@@ -326,7 +409,7 @@ body {
     grid-area: month;
 }
 
-.activities {
+#activities {
     grid-area: activities;
 }
 
@@ -344,6 +427,30 @@ body {
 
 .activity__previous {
     grid-area: activity__previous;
+}
+
+.activity__work {
+    grid-area: activity__work;
+}
+
+.activity__play {
+    grid-area: activity__play;
+}
+
+.activity__study {
+    grid-area: activity__study;
+}
+
+.activity__exercise {
+   grid-area: activity__exercise;
+}
+
+.activity__social {
+    grid-area: activity__social;
+}
+
+.activity__self-care {
+   grid-area: activity__self-care;
 }
 
 .attribution {

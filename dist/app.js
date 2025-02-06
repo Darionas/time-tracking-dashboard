@@ -27,7 +27,7 @@ function updateActivities() {
             let currentHours = current === 1 ? 'hr' : 'hrs';
             let previousHours = previous === 1 ? 'hr' : 'hrs';
             let template = `
-                    <div class="activity">
+                    <div class="activity__${activityTitle} activity__container">
                         <div class="activity__title ${activityTitle}">
                             <img class="activity__image" src="images/icon-${activityTitle}.svg" alt="${activityTitle}"/>
                         </div>
