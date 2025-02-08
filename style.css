@@ -25,59 +25,67 @@
    --fw-400: 400;
    --fw-500: 500; 
    --fs-18: 1.125rem; /*18px*/
+   /*
+     + Notice mob: clamp(.7rem, .5vw, 1rem);
+     + Name mob: clamp(1.4rem, 1.6vw, 1.9rem);
+     + Period desk: clamp(1rem, .8vw, 1.125rem);
+     + Activity, info, period desk: clamp( .8rem, 1vw, 1.125rem);
+     + Current mob: clamp(1.8rem, 6vw, 2.2rem);
+     Previous mob: clamp(.6rem, 3vw, .8rem);
+     
+     + Notice desk: clamp(.7rem, .5vw, 1rem);
+     + Name desk: clamp(1.4rem, 1.6vw, 1.9rem);
+     + Period desk: clamp(1rem, .8vw, 1.125rem);
+     + Activity, info desk: clamp( .8rem, 1vw, 1.125rem);
+     Current desk: clamp(1.4rem, 1.6vw, 2rem);
+     Previous desk: clamp(.6rem, 3vw, .8rem);
+   */
+   /*
+      Report for, Last Week - 16px;
+      Daily, Work - 18px
+      Jeremy - 20px
+      4hrs - 22px
+   */
    
-}  
-
-
-html {
-   height: 100%;
 }
 
 body {
-   min-height: 100%;
-}
-
-p, h2 {
-   line-height: 1.4;
-}
-
-
-body {
-   display: flex;
-   min-height: 100vh;
-   justify-content: center;
-   align-items: center;
-   font-family: var(--ff-primary);
-   font-size: var(--fs-18);
-   color: var(--clr-white);
-   background-color: var(--clr-very-dark-blue);
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-18);
+    color: var(--clr-white);
+    background-color: var(--clr-very-dark-blue);
 }
 
 /*---------------------Mobile layout-------------------------*/
 .grid__container {
-   display: grid;
-   grid-template-columns: 1fr;
-   grid-template-areas:
-       'header'
-       'main'
-       'attribution';
-   justify-items: center;
-   min-width: 21rem;
-   border: 2px solid red;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'header'
+        'main'
+        'attribution';
+    justify-items: center;
+    width: 21rem;
+   /* border: 2px solid red; */
 }
 
 /* style 1st component - mobile */
 .sr-only {
-   position: absolute;
-   width: 1px;
-   height: 1px;
-   padding: 0;
-   margin: -1px;
-   overflow: hidden;
-   clip: rect(0, 0, 0, 0);
-   white-space: nowrap;
-   border: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
+
 /* style 2nd component - mobile */
 .main {
     display: grid;
@@ -86,8 +94,8 @@ body {
         'user'
         'activities';
     gap: 1.5rem;
-    width: 90%;
-    border: 2px solid white;
+    width: 100%;
+    /* border: 2px solid white; */
 }
 
 .user {
@@ -101,18 +109,15 @@ body {
 
 .user__data {
     display: grid;
-    grid-template-columns: 2fr;
+    grid-template-rows: 2fr;
     grid-template-areas:
         'user__data-image user__data-notice'
         'user__data-image user__data-name';
-    /* gap: 1rem; */
+    justify-content: center;
     background-color: var(--clr-blue);
     border-radius: 0.7rem;
     padding: 2rem;
-    justify-content: center;
-   /*  overflow: hidden !important; */
     z-index: 1;
-    /* height: 10rem; */
     /* border: 2px solid blue; */
 }
 
@@ -120,7 +125,7 @@ body {
     width: 4rem;
     border-radius: 50%;
     border: 2px solid white;
-    justify-self: center;
+    justify-self: end;
     align-self: center;
     margin-right: 1rem;
 }
@@ -129,7 +134,7 @@ body {
     color: var(--clr-pale-blue);
     justify-self: start;
     align-self: end;
-    font-size: 1rem;
+    font-size: clamp(.7rem, .5vw, 1rem);
     /* border: 2px solid white; */
 }
 
@@ -137,7 +142,7 @@ body {
     text-transform: capitalize;
     justify-self: start;
     align-self: start;
-    font-size: 1.5rem;
+    font-size: clamp(1.4rem, 1.6vw, 1.9rem);
     /* border: 2px solid white; */
 }
 
@@ -146,13 +151,13 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
         'day week month';
+    justify-items: center;    
+    text-transform: capitalize;    
     color: var(--clr-desaturated-blue);
-    background-color: var(--clr-dark-blue);
-    justify-items: center;
-    text-transform: capitalize;
     padding: 2.5rem 1rem 1rem;
-    border-radius: 0.7rem;
     margin-top: -1.5rem;
+    border-radius: 0.7rem;
+    background-color: var(--clr-dark-blue);
     /* border: 2px solid green; */
 }
 
@@ -170,62 +175,46 @@ body {
         'activity__exercise'
         'activity__social'
         'activity__self-care';
-    border: 2px solid yellow;
     gap: 1.5rem;
+    /* border: 2px solid yellow; */
 }
 
-/* .activity__title {
-   overflow: hidden;
-} */
-
-.work {
+.activity__title {
     border-radius: 0.7rem;
     place-items: end;
     overflow: hidden;
+}
+
+.work {
     background-color: var(--clr-light-red-work);
 }
 
 .play {
-    border-radius: 0.7rem;
-    place-items: end;
-    overflow: hidden;
     background-color: var(--clr-soft-blue-play);
 }
 
 .study {
-    border-radius: 0.7rem;
-    place-items: end;
-    overflow: hidden;
     background-color: var(--clr-light-red-study);
 }
 
 .exercise {
-    border-radius: 0.7rem;
-    place-items: end;
-    overflow: hidden;
     background-color: var(--clr-lime-green-exercise);
 }
 
 .social {
-    border-radius: 0.7rem;
-    place-items: end;
-    overflow: hidden;
     background-color: var(--clr-violet-social);
 }
 
 .self-care {
-    border-radius: 0.7rem;
-    place-items: end;
-    overflow: hidden;
     background-color: var(--clr-soft-orange-selfCare);
 }
 
 .activity__image {
-   width: auto;
-   height: 4.5rem;
-   margin-top: -0.4rem;
-   margin-right: 1rem;
-   /* border: 2px solid yellow; */
+    width: auto;
+    height: 4.5rem;
+    margin-top: -0.4rem;
+    margin-right: 1rem;
+    /* border: 2px solid yellow; */
 }
 
 .activity__data {
@@ -234,18 +223,18 @@ body {
     grid-template-areas:
         'activity__desc activity__info'
         'activity__current activity__previous';
+    gap: 1.5rem;    
     padding: 1.5rem;
+    margin-top: -1.7rem;
     background-color: var(--clr-dark-blue);
     border-radius: 0.7rem;
-    margin-top: -1.7rem;
     position: relative;
     z-index: 0;
-    gap: 1.5rem;
 }
 
 .activity__desc {
-   align-self: end;
-   /* border: 2px solid white; */
+    align-self: end;
+    /* border: 2px solid white; */
 }
 
 .activity__info {
@@ -254,20 +243,25 @@ body {
     /* border: 2px solid white; */
 }
 
+.activity__desc, .activity__info, .user__activity-period {
+    /* font-size: clamp( .8rem, 1vw, 1.125rem); */
+    font-size: clamp(.8rem, 1vw, 1.125rem);
+}
+
 .activity__current {
-   font-size: 1.8vw;
-   align-self: start;
-   margin-top: -1rem;
-   /* border: 2px solid white; */
+    font-size: clamp(1.6rem, 1.6vw, 2.6rem);
+    align-self: start;
+    margin-top: -1rem;
+    /* border: 2px solid white; */
 }
 
 .activity__previous {
     text-transform: capitalize;
+    color: var(--clr-pale-blue);
+    font-size: clamp(.6rem, 3vw, .8rem);
     justify-self: end;
     align-self: center;
-    font-size: 0.8rem;
     margin-top: -1rem;
-    color: var(--clr-pale-blue);
     /* border: 2px solid white; */
 }
 
@@ -277,12 +271,12 @@ body {
 /*---------------------Desktop layout-------------------------*/
 @media screen and (min-width: 48rem) {
 
- .grid__container {
-    width: 60rem;
- }
+.grid__container {
+    width: 50rem;
+}
  
 /* style 1st component - desktop */
-
+/*No style*/
 
 /*style 2nd component - desktop */
 .main {
@@ -290,14 +284,15 @@ body {
     grid-template-columns: 2fr;
     grid-template-areas:
         'user activities';
-    gap: 1.5rem;
+    gap: 1rem;
     width: 100%;
-    border: 2px solid white;
+    /* border: 2px solid white; */
 }
 
 .user {
-    width: 12rem;
+    width: max(75%, 11rem);
     justify-self: end;
+    /* border: 2px solid white; */
 }
 
 .user__data {
@@ -312,36 +307,27 @@ body {
     justify-self: start;
 }
 
-.user__data-notice {
-   font-size: 0.7rem;
-}
-
-.user__data-name {
-    font-size: 1.9rem;
-}
-
 .user__activity-period {
-    grid-template-columns: 1fr;
     grid-template-areas:
         'day'
         'week'
         'month';
     justify-items: start;
-    padding-left: 2rem;
 }
 
 #activities {
-    grid-template-columns: 3fr;
+    grid-template-rows: 2fr;
     grid-template-areas:
         'activity__work activity__play activity__study'
         'activity__exercise activity__social activity__self-care';
+    gap: 1rem;
+    justify-self: start;
     width: 100%;
     margin-top: 1rem;
-    justify-self: start;
 }
 
 .activity__container {
-    max-width: 14rem;
+    width: 11rem;
     /* border: 2px solid white; */
 }
 
@@ -349,9 +335,13 @@ body {
     grid-template-columns: 2fr;
     grid-template-areas:
         'activity__desc activity__info'
-        'activity__current .'
-        'activity__previous .';
-    /* width: 15rem; */
+        'activity__current activity__current'
+        'activity__previous activity__previous';
+    gap: 1rem;
+}
+
+.activity__current {
+    margin-top: .1rem;
 }
 
 .activity__previous {
@@ -386,7 +376,7 @@ body {
 }
 
 .user__data-notice {
-   grid-area: user__data-notice;
+    grid-area: user__data-notice;
 }
 
 .user__data-name {
@@ -442,7 +432,7 @@ body {
 }
 
 .activity__exercise {
-   grid-area: activity__exercise;
+    grid-area: activity__exercise;
 }
 
 .activity__social {
@@ -450,7 +440,7 @@ body {
 }
 
 .activity__self-care {
-   grid-area: activity__self-care;
+    grid-area: activity__self-care;
 }
 
 .attribution {

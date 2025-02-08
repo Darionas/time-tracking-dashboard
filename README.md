@@ -25,6 +25,6 @@ Users should be able to:
 - [x] Create HTML layout (3rd task)
 - [x] Create CSS layout according style guides (4th task)
 - [x] Create grid layout for mobile first (5th task)
-- [ ] Craete grid layout for desktop (6th task)
+- [x] Craete grid layout for desktop (6th task)
 - [x] Implement TypeScript (7th task)
-- [ ] Tada it is done. Congratulation you reach your goal.🎉
+- [x] Tada it is done. Congratulation you reach your goal.🎉

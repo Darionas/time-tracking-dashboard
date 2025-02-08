@@ -34,7 +34,7 @@ function updateActivities() {
                         <div class="activity__data">
                             <p class="activity__desc">${data.title}</p>
                             <p class="activity__info"><img class="dots" src="images/icon-ellipsis.svg" alt="Ellipsis" /> </p>
-                            <p class="activity__current">${current} ${currentHours}</p>
+                            <p class="activity__current">${current}${currentHours}</p>
                             <p class="activity__previous">Last ${period} - ${previous} ${previousHours}</p>
                         </div>
                     </div>
