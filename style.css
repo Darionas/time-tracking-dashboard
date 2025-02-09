@@ -1,14 +1,14 @@
 :root {
    /* colors */
    /* primary*/
-   --clr-blue: hsl(246, 80%, 60%);
+    --clr-blue: hsl(246, 80%, 60%);
    
-   --clr-light-red-work: hsl(15, 100%, 70%);
-   --clr-soft-blue-play: hsl(195, 74%, 62%);
-   --clr-light-red-study: hsl(348, 100%, 68%);
-   --clr-lime-green-exercise: hsl(145, 58%, 55%);
-   --clr-violet-social: hsl(264, 64%, 52%);
-   --clr-soft-orange-selfCare: hsl(43, 84%, 65%);
+    --clr-light-red-work: hsl(15, 100%, 70%);
+    --clr-soft-blue-play: hsl(195, 74%, 62%);
+    --clr-light-red-study: hsl(348, 100%, 68%);
+    --clr-lime-green-exercise: hsl(145, 58%, 55%);
+    --clr-violet-social: hsl(264, 64%, 52%);
+    --clr-soft-orange-selfCare: hsl(43, 84%, 65%);
 
     /* neutral */
     --clr-very-dark-blue: hsl(226, 43%, 10%);
@@ -18,40 +18,21 @@
     --clr-white: hsl(0, 0%, 100%);
    
  
-   /* typography */
-   /* fonts */
-   --ff-primary: "Rubik", serif;
-   --fw-300: 300;
-   --fw-400: 400;
-   --fw-500: 500; 
-   --fs-18: 1.125rem; /*18px*/
-   /*
-     + Notice mob: clamp(.7rem, .5vw, 1rem);
-     + Name mob: clamp(1.4rem, 1.6vw, 1.9rem);
-     + Period desk: clamp(1rem, .8vw, 1.125rem);
-     + Activity, info, period desk: clamp( .8rem, 1vw, 1.125rem);
-     + Current mob: clamp(1.8rem, 6vw, 2.2rem);
-     Previous mob: clamp(.6rem, 3vw, .8rem);
-     
-     + Notice desk: clamp(.7rem, .5vw, 1rem);
-     + Name desk: clamp(1.4rem, 1.6vw, 1.9rem);
-     + Period desk: clamp(1rem, .8vw, 1.125rem);
-     + Activity, info desk: clamp( .8rem, 1vw, 1.125rem);
-     Current desk: clamp(1.4rem, 1.6vw, 2rem);
-     Previous desk: clamp(.6rem, 3vw, .8rem);
-   */
-   /*
-      Report for, Last Week - 16px;
-      Daily, Work - 18px
-      Jeremy - 20px
-      4hrs - 22px
-   */
-   
+    /* typography */
+    --ff-primary: "Rubik", serif;
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-500: 500; 
+    --fs-18: 1.125rem; /*18px*/
+    --fs-data-notice--activity__previous: clamp(.8rem, .1vw, 1rem);
+    --fs-data-name: clamp(1.4rem, 1.6vw, 1.9rem);
+    --fs-button--activity__desc--activity__info: clamp(1rem, .8vw, 1.125rem);
+    --fs-activity__current: clamp(1.8rem, 6vw, 2.2rem);
 }
 
 body {
     display: flex;
-    height: 100%;
+    min-height: 100vh;
     justify-content: center;
     align-items: center;
     font-family: var(--ff-primary);
@@ -70,7 +51,6 @@ body {
         'attribution';
     justify-items: center;
     width: 21rem;
-   /* border: 2px solid red; */
 }
 
 /* style 1st component - mobile */
@@ -95,7 +75,6 @@ body {
         'activities';
     gap: 1.5rem;
     width: 100%;
-    /* border: 2px solid white; */
 }
 
 .user {
@@ -118,7 +97,6 @@ body {
     border-radius: 0.7rem;
     padding: 2rem;
     z-index: 1;
-    /* border: 2px solid blue; */
 }
 
 .user__data-image {
@@ -134,16 +112,22 @@ body {
     color: var(--clr-pale-blue);
     justify-self: start;
     align-self: end;
-    font-size: clamp(.7rem, .5vw, 1rem);
-    /* border: 2px solid white; */
+    font-size: var(--fs-data-notice--activity__previous);
+}
+
+.user__data-notice, .activity__previous{
+    font-size: var( --fs-data-notice--activity__previous);
 }
 
 .user__data-name {
     text-transform: capitalize;
     justify-self: start;
     align-self: start;
-    font-size: clamp(1.4rem, 1.6vw, 1.9rem);
-    /* border: 2px solid white; */
+    font-size: var(--fs-data-name);
+}
+
+.user__data-notice, .user__data-name, .activity__current {
+    font-weight: var(--fw-300);
 }
 
 .user__activity-period {
@@ -152,17 +136,29 @@ body {
     grid-template-areas:
         'day week month';
     justify-items: center;    
-    text-transform: capitalize;    
-    color: var(--clr-desaturated-blue);
     padding: 2.5rem 1rem 1rem;
     margin-top: -1.5rem;
     border-radius: 0.7rem;
     background-color: var(--clr-dark-blue);
-    /* border: 2px solid green; */
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    text-transform: capitalize;    
+    color: var(--clr-desaturated-blue);
+}
+
+button, .activity__desc, .activity__info {
+    font-size: clamp(1rem, .8vw, 1.125rem);
+}
+
+button, .activity__previous {
+    font-weight: var(--fw-400);
 }
 
 .colorPeriod {
-   color: white;
+    color: white;
 }
 
 #activities {
@@ -176,7 +172,6 @@ body {
         'activity__social'
         'activity__self-care';
     gap: 1.5rem;
-    /* border: 2px solid yellow; */
 }
 
 .activity__title {
@@ -214,7 +209,6 @@ body {
     height: 4.5rem;
     margin-top: -0.4rem;
     margin-right: 1rem;
-    /* border: 2px solid yellow; */
 }
 
 .activity__data {
@@ -223,7 +217,7 @@ body {
     grid-template-areas:
         'activity__desc activity__info'
         'activity__current activity__previous';
-    gap: 1.5rem;    
+    gap: 1.2rem;    
     padding: 1.5rem;
     margin-top: -1.7rem;
     background-color: var(--clr-dark-blue);
@@ -234,35 +228,26 @@ body {
 
 .activity__desc {
     align-self: end;
-    /* border: 2px solid white; */
+    font-weight: var(--fw-500);
 }
 
 .activity__info {
     justify-self: end;
     align-self: center;
-    /* border: 2px solid white; */
-}
-
-.activity__desc, .activity__info, .user__activity-period {
-    /* font-size: clamp( .8rem, 1vw, 1.125rem); */
-    font-size: clamp(.8rem, 1vw, 1.125rem);
 }
 
 .activity__current {
-    font-size: clamp(1.6rem, 1.6vw, 2.6rem);
+    font-size: var(--fs-activity__current);
     align-self: start;
     margin-top: -1rem;
-    /* border: 2px solid white; */
 }
 
 .activity__previous {
     text-transform: capitalize;
     color: var(--clr-pale-blue);
-    font-size: clamp(.6rem, 3vw, .8rem);
     justify-self: end;
     align-self: center;
     margin-top: -1rem;
-    /* border: 2px solid white; */
 }
 
 /* style 3rd component - mobile */
@@ -286,13 +271,11 @@ body {
         'user activities';
     gap: 1rem;
     width: 100%;
-    /* border: 2px solid white; */
 }
 
 .user {
-    width: max(75%, 11rem);
+    width: max(75%, 12rem);
     justify-self: end;
-    /* border: 2px solid white; */
 }
 
 .user__data {
@@ -315,6 +298,12 @@ body {
     justify-items: start;
 }
 
+button:focus,
+button:hover {
+    cursor: pointer;
+    color: white;
+}
+
 #activities {
     grid-template-rows: 2fr;
     grid-template-areas:
@@ -328,7 +317,6 @@ body {
 
 .activity__container {
     width: 11rem;
-    /* border: 2px solid white; */
 }
 
 .activity__data {
@@ -338,6 +326,17 @@ body {
         'activity__current activity__current'
         'activity__previous activity__previous';
     gap: 1rem;
+}
+
+.activity__data:focus,
+.activity__data:hover {
+    cursor: pointer;
+    background-color: var(--clr-desaturated-blue);
+}
+
+.activity__info:focus,
+.activity__info:hover {
+    cursor: pointer;
 }
 
 .activity__current {

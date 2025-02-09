@@ -3,18 +3,16 @@
 <head>
     <meta charset="UTF-8" />
     <title>Frontend Mentor | Time tracking dashboard</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <meta name="keywords" content="Time tracking dashboard" />
     <meta name="description" content="Daily, weekly, and monthly time tracking dashboard." />
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!---------------Font----------------->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <!------------------------------------->
-    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="FM_part.css" />
 </head>
 <body>
@@ -25,17 +23,17 @@
         <main class="main" aria-labelledby="main-title">
             <div class="user">
                 <div class="user__data">
-                    <img class="user__data-image" src="images/image-jeremy.png" alt="Jeremy" />
+                    <img class="user__data-image" src="images/image-jeremy.png" alt="Profile picture of Jeremy Robson" />
                     <p class="user__data-notice">Report for</p>
                     <p class="user__data-name">jeremy robson</p>
                 </div>
                 <div class="user__activity-period">
-                    <p id="day">daily</p>
-                    <p id="week">weekly</p>
-                    <p id="month">monthly</p>
+                    <button id="day" aria-label="View daily activity" tabindex="1">daily</button>
+                    <button id="week" aria-label="View daily activity" tabindex="2">weekly</button>
+                    <button id="month" aria-label="View daily activity" tabindex="3">monthly</button>
                 </div>
             </div>
-            <div id="activities"></div>
+            <div id="activities" aria-live="polite"></div>
         </main>
         <footer class="attribution" aria-label="Page footer">
             Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
