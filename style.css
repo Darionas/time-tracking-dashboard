@@ -115,9 +115,9 @@ body {
     font-size: var(--fs-data-notice--activity__previous);
 }
 
-.user__data-notice, .activity__previous{
+/* .user__data-notice, .activity__previous{
     font-size: var( --fs-data-notice--activity__previous);
-}
+} */
 
 .user__data-name {
     text-transform: capitalize;
@@ -126,9 +126,9 @@ body {
     font-size: var(--fs-data-name);
 }
 
-.user__data-notice, .user__data-name, .activity__current {
+/* .user__data-notice, .user__data-name, .activity__current {
     font-weight: var(--fw-300);
-}
+} */
 
 .user__activity-period {
     display: grid;
@@ -149,13 +149,13 @@ button {
     color: var(--clr-desaturated-blue);
 }
 
-button, .activity__desc, .activity__info {
+/* button, .activity__desc, .activity__info {
     font-size: clamp(1rem, .8vw, 1.125rem);
 }
 
 button, .activity__previous {
     font-weight: var(--fw-400);
-}
+} */
 
 .colorPeriod {
     color: white;
@@ -229,17 +229,20 @@ button, .activity__previous {
 .activity__desc {
     align-self: end;
     font-weight: var(--fw-500);
+    border: 2px solid white;
 }
 
 .activity__info {
     justify-self: end;
     align-self: center;
+    border: 2px solid white;
 }
 
 .activity__current {
     font-size: var(--fs-activity__current);
     align-self: start;
     margin-top: -1rem;
+    border: 2px solid white;
 }
 
 .activity__previous {
@@ -248,6 +251,7 @@ button, .activity__previous {
     justify-self: end;
     align-self: center;
     margin-top: -1rem;
+    border: 2px solid white;
 }
 
 /* style 3rd component - mobile */
@@ -258,6 +262,7 @@ button, .activity__previous {
 
 .grid__container {
     width: 50rem;
+    border: 2px solid white;
 }
  
 /* style 1st component - desktop */
@@ -298,11 +303,11 @@ button, .activity__previous {
     justify-items: start;
 }
 
-button:focus,
+/* button:focus,
 button:hover {
     cursor: pointer;
     color: white;
-}
+} */
 
 #activities {
     grid-template-rows: 2fr;
@@ -328,16 +333,16 @@ button:hover {
     gap: 1rem;
 }
 
-.activity__data:focus,
+/* .activity__data:focus,
 .activity__data:hover {
     cursor: pointer;
     background-color: var(--clr-desaturated-blue);
-}
+} */
 
-.activity__info:focus,
+/* .activity__info:focus,
 .activity__info:hover {
     cursor: pointer;
-}
+} */
 
 .activity__current {
     margin-top: .1rem;
