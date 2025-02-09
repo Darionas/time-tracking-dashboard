@@ -61,7 +61,7 @@ function renderActivities(timeData) {
                 </div>
                 <div class="activity__data">
                     <p class="activity__desc">${data.title}</p>
-                    <class="activity__info"><img class="dots" src="images/icon-ellipsis.svg" alt="" role="button" tabindex=${evensNum[startEvens++]} aria-label="More options for ${activityTitle}" /> </p>
+                    <p class="activity__info"><img class="dots" src="images/icon-ellipsis.svg" alt="" role="button" tabindex=${evensNum[startEvens++]} aria-label="More options for ${activityTitle}" /> </p>
                     <p class="activity__current">${current}${currentHours}</p>
                     <p class="activity__previous">Last ${period} - ${previous}${previousHours}</p>
                 </div>
