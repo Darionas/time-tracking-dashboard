@@ -32,7 +32,7 @@
 
 body {
     display: flex;
-    min-height: 100vh;
+    height: 100%;
     justify-content: center;
     align-items: center;
     font-family: var(--ff-primary);
@@ -115,9 +115,9 @@ body {
     font-size: var(--fs-data-notice--activity__previous);
 }
 
-/* .user__data-notice, .activity__previous{
-    font-size: var( --fs-data-notice--activity__previous);
-} */
+.user__data-notice, .activity__previous{
+    font-size: var(--fs-data-notice--activity__previous);
+}
 
 .user__data-name {
     text-transform: capitalize;
@@ -126,9 +126,9 @@ body {
     font-size: var(--fs-data-name);
 }
 
-/* .user__data-notice, .user__data-name, .activity__current {
+.user__data-notice, .user__data-name, .activity__current {
     font-weight: var(--fw-300);
-} */
+}
 
 .user__activity-period {
     display: grid;
@@ -149,13 +149,13 @@ button {
     color: var(--clr-desaturated-blue);
 }
 
-/* button, .activity__desc, .activity__info {
-    font-size: clamp(1rem, .8vw, 1.125rem);
+button, .activity__desc, .activity__info {
+    font-size: var(--fs-button--activity__desc--activity__info);
 }
 
 button, .activity__previous {
     font-weight: var(--fw-400);
-} */
+}
 
 .colorPeriod {
     color: white;
