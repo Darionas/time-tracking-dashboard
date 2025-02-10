@@ -42,15 +42,6 @@ function updateActivities() {
 }
 function renderActivities(timeData) {
     activities.innerHTML = '';
-    let num = timeData.length * 2 + 3;
-    console.log(timeData.length);
-    let i = num;
-    let evensNum = Array.from({ length: Math.floor((15 - 4) / 2) + 1 }, (_, i) => 4 + i * 2);
-    let oddsNum = Array.from({ length: Math.floor((15 - 5) / 2) + 1 }, (_, i) => 5 + i * 2);
-    let startOdds = 0;
-    let startEvens = 0;
-    console.log(evensNum);
-    console.log(oddsNum);
     timeData.forEach((data) => {
         let activityTitle = data.title.toLowerCase().replace(/\s+/g, '-');
         let current = data.timeframes[periodHTML].current;
@@ -58,13 +49,13 @@ function renderActivities(timeData) {
         let currentHours = current === 1 ? 'hr' : 'hrs';
         let previousHours = previous === 1 ? 'hr' : 'hrs';
         let template = `
-            <div class="activity activity--${activityTitle}" tabindex=${evensNum[startEvens++]}>
+            <div class="activity activity--${activityTitle}">
                 <div class="activity__title activity__title--${activityTitle}">
                     <img class="activity__image" src="images/icon-${activityTitle}.svg" alt="${activityTitle}"/>
                 </div>
                 <div class="activity__data">
                     <p class="activity__desc">${data.title}</p>
-                    <button class="activity__info" tabindex=${oddsNum[startOdds++]}><img class="dots" src="images/icon-ellipsis.svg" alt="" aria-label="More options for ${activityTitle}" /> </button>
+                    <button class="activity__info"><img class="dots" src="images/icon-ellipsis.svg" role="presentation" alt="" aria-label="More options for ${activityTitle}" /> </button>
                     <p class="activity__current">${current}${currentHours}</p>
                     <p class="activity__previous">Last ${period} - ${previous}${previousHours}</p>
                 </div>
