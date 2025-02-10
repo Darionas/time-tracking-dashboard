@@ -42,7 +42,7 @@ body {
 }
 
 /*---------------------Mobile layout-------------------------*/
-.grid__container {
+.dashboard {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -90,8 +90,8 @@ body {
     display: grid;
     grid-template-rows: 2fr;
     grid-template-areas:
-        'user__data-image user__data-notice'
-        'user__data-image user__data-name';
+        'user__image user__notice'
+        'user__image user__name';
     justify-content: center;
     background-color: var(--clr-blue);
     border-radius: 0.7rem;
@@ -99,7 +99,7 @@ body {
     z-index: 1;
 }
 
-.user__data-image {
+.user__image {
     width: 4rem;
     border-radius: 50%;
     border: 2px solid white;
@@ -108,26 +108,26 @@ body {
     margin-right: 1rem;
 }
 
-.user__data-notice {
+.user__notice {
     color: var(--clr-pale-blue);
     justify-self: start;
     align-self: end;
 }
 
-.user__data-notice, 
+.user__notice, 
 .activity__previous{
     font-size: var(--fs-notice-previous);
 }
 
-.user__data-name {
+.user__name {
     text-transform: capitalize;
     justify-self: start;
     align-self: start;
     font-size: var(--fs-name);
 }
 
-.user__data-notice, 
-.user__data-name, 
+.user__notice, 
+.user__name, 
 .activity__current {
     font-weight: var(--fw-300);
 }
@@ -144,38 +144,38 @@ body {
     background-color: var(--clr-dark-blue);
 }
 
-button {
+.user__activity-button {
     background-color: transparent;
     border: none;
     text-transform: capitalize;    
     color: var(--clr-desaturated-blue);
 }
 
-button, 
+.user__activity-button, 
 .activity__desc, 
 .activity__info {
     font-size: var(--fs-button-desc-info);
 }
 
-button, 
+.user__activity-button, 
 .activity__previous {
     font-weight: var(--fw-400);
 }
 
-.colorPeriod {
+.user__activity-button--selected {
     color: white;
 }
 
-#activities {
+.activities {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
-        'activity__work'
-        'activity__play'
-        'activity__study'
-        'activity__exercise'
-        'activity__social'
-        'activity__self-care';
+        'activity-work'
+        'activity-play'
+        'activity-study'
+        'activity-exercise'
+        'activity-social'
+        'activity-self-care';
     gap: 1.5rem;
 }
 
@@ -185,27 +185,27 @@ button,
     overflow: hidden;
 }
 
-.work {
+.activity__title--work {
     background-color: var(--clr-light-red-work);
 }
 
-.play {
+.activity__title--play {
     background-color: var(--clr-soft-blue-play);
 }
 
-.study {
+.activity__title--study {
     background-color: var(--clr-light-red-study);
 }
 
-.exercise {
+.activity__title--exercise {
     background-color: var(--clr-lime-green-exercise);
 }
 
-.social {
+.activity__title--social {
     background-color: var(--clr-violet-social);
 }
 
-.self-care {
+.activity__title--self-care {
     background-color: var(--clr-soft-orange-selfCare);
 }
 
@@ -261,7 +261,7 @@ button,
 /*---------------------Desktop layout-------------------------*/
 @media screen and (min-width: 48rem) {
 
-.grid__container {
+.dashboard {
     width: 50rem;
 }
  
@@ -286,12 +286,12 @@ button,
 .user__data {
     grid-template-columns: 1fr;
     grid-template-areas:
-        'user__data-image'
-        'user__data-notice'
-        'user__data-name';
+        'user__image'
+        'user__notice'
+        'user__name';
 }
 
-.user__data-image {
+.user__image {
     justify-self: start;
 }
 
@@ -303,24 +303,24 @@ button,
     justify-items: start;
 }
 
-button:focus,
-button:hover {
+.user__activity-button:focus,
+.user__activity-button:hover {
     cursor: pointer;
     color: white;
 }
 
-#activities {
+.activities {
     grid-template-rows: 2fr;
     grid-template-areas:
-        'activity__work activity__play activity__study'
-        'activity__exercise activity__social activity__self-care';
+        'activity-work activity-play activity-study'
+        'activity-exercise activity-social activity-self-care';
     gap: 1rem;
     justify-self: start;
     width: 100%;
     margin-top: 1rem;
 }
 
-.activity__container {
+.activity {
     width: 11rem;
 }
 
@@ -370,16 +370,16 @@ button:hover {
     grid-area: user__data;
 }
 
-.user__data-image {
-    grid-area: user__data-image;
+.user__image {
+    grid-area: user__image;
 }
 
-.user__data-notice {
-    grid-area: user__data-notice;
+.user__notice {
+    grid-area: user__notice;
 }
 
-.user__data-name {
-    grid-area: user__data-name;
+.user__name {
+    grid-area: user__name;
 }
 
 .user__activity-period {
@@ -398,7 +398,7 @@ button:hover {
     grid-area: month;
 }
 
-#activities {
+.activities {
     grid-area: activities;
 }
 
@@ -418,28 +418,28 @@ button:hover {
     grid-area: activity__previous;
 }
 
-.activity__work {
-    grid-area: activity__work;
+.activity--work {
+    grid-area: activity-work;
 }
 
-.activity__play {
-    grid-area: activity__play;
+.activity--play {
+    grid-area: activity-play;
 }
 
-.activity__study {
-    grid-area: activity__study;
+.activity--study {
+    grid-area: activity-study;
 }
 
-.activity__exercise {
-    grid-area: activity__exercise;
+.activity--exercise {
+    grid-area: activity-exercise;
 }
 
-.activity__social {
-    grid-area: activity__social;
+.activity--social {
+    grid-area: activity-social;
 }
 
-.activity__self-care {
-    grid-area: activity__self-care;
+.activity--self-care {
+    grid-area: activity-self-care;
 }
 
 .attribution {

@@ -16,24 +16,24 @@
     <link rel="stylesheet" href="FM_part.css" />
 </head>
 <body>
-    <div class="grid__container">
+    <div class="dashboard">
         <header class="header sr-only" aria-label="Page header">
             <h1>time tracking dashboard</h1>
         </header>
         <main class="main" aria-label="main-title">
             <div class="user">
                 <div class="user__data">
-                    <img class="user__data-image" src="images/image-jeremy.png" alt="Profile picture of Jeremy Robson" />
-                    <p class="user__data-notice">Report for</p>
-                    <p class="user__data-name">jeremy robson</p>
+                    <img class="user__image" src="images/image-jeremy.png" alt="Profile picture of Jeremy Robson" />
+                    <p class="user__notice">Report for</p>
+                    <p class="user__name">jeremy robson</p>
                 </div>
                 <div class="user__activity-period">
-                    <button id="day" aria-label="View daily activity" tabindex="1">daily</button>
-                    <button id="week" aria-label="View daily activity" tabindex="2">weekly</button>
-                    <button id="month" aria-label="View daily activity" tabindex="3">monthly</button>
+                    <button class=" user__activity-button" id="day" aria-label="View daily activity" tabindex="1">daily</button>
+                    <button class="user__activity-button" id="week" aria-label="View daily activity" tabindex="2">weekly</button>
+                    <button class="user__activity-button" id="month" aria-label="View daily activity" tabindex="3">monthly</button>
                 </div>
             </div>
-            <div id="activities" aria-live="polite"></div>
+            <div class="activities" aria-live="polite"></div>
         </main>
         <footer class="attribution" aria-label="Page footer">
             Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

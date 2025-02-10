@@ -9,12 +9,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 var _a;
-const day = document.getElementById('day');
-let activities = document.getElementById('activities');
+const buttons = document.querySelector('.user__activity-button');
+let activities = document.querySelector('.activities');
 let period = 'day';
 let periodHTML = 'daily';
 updateActivities();
-day === null || day === void 0 ? void 0 : day.classList.add('colorPeriod');
+buttons === null || buttons === void 0 ? void 0 : buttons.classList.add('user__activity-button--selected');
 (_a = document.querySelector('.user__activity-period')) === null || _a === void 0 ? void 0 : _a.addEventListener('click', (e) => {
     var _a;
     const target = e.target;
@@ -23,8 +23,8 @@ day === null || day === void 0 ? void 0 : day.classList.add('colorPeriod');
         periodHTML = target.innerText.toLowerCase();
         updateActivities();
     }
-    (_a = document.querySelector('.colorPeriod')) === null || _a === void 0 ? void 0 : _a.classList.remove('colorPeriod');
-    target.classList.add('colorPeriod');
+    (_a = document.querySelector('.user__activity-button--selected')) === null || _a === void 0 ? void 0 : _a.classList.remove('user__activity-button--selected');
+    target.classList.add('user__activity-button--selected');
 });
 function updateActivities() {
     return __awaiter(this, void 0, void 0, function* () {
@@ -55,8 +55,8 @@ function renderActivities(timeData) {
         let currentHours = current === 1 ? 'hr' : 'hrs';
         let previousHours = previous === 1 ? 'hr' : 'hrs';
         let template = `
-            <div class="activity__${activityTitle} activity__container" tabindex=${oddsNum[startOdds++]}>
-                <div class="activity__title ${activityTitle}">
+            <div class="activity activity--${activityTitle}" tabindex=${oddsNum[startOdds++]}>
+                <div class="activity__title activity__title--${activityTitle}">
                     <img class="activity__image" src="images/icon-${activityTitle}.svg" alt="${activityTitle}"/>
                 </div>
                 <div class="activity__data">
