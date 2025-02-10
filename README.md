@@ -1,16 +1,23 @@
-# Frontend Mentor challenge - Time tracking dashboard
+# Frontend Mentor - Time tracking dashboard
 
-## Welcome! 👋
+## Table of contents
 
-![Static Badge](https://img.shields.io/badge/https%3A%2F%2Fimg.shields.io%2Fbadge%2FDifficulty-junior-%2391bd28?style=for-the-badge&logo=Frontend%20mentor&logoColor=white&label=Difficulty&labelColor=%23555555&color=%2391bd28)
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-## Challenge based on
 
-- HTML
-- CSS
-- TypeScript
+## Overview
 
-## Main goal for challenge
+### The challenge
 
 Users should be able to:
 
@@ -18,13 +25,51 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - Switch between viewing Daily, Weekly, and Monthly stats
 
-## Plan workflow
+### Screenshot
 
-- [x] Create of repo (1st task)
-- [x] Create drawing from design (structure of design)(2nd task)
-- [x] Create HTML layout (3rd task)
-- [x] Create CSS layout according style guides (4th task)
-- [x] Create grid layout for mobile first (5th task)
-- [x] Craete grid layout for desktop (6th task)
-- [x] Implement TypeScript (7th task)
-- [x] Tada it is done. Congratulation you reach your goal.🎉
+![Expenses chart component](./images/dashboard.jpg)
+
+### Links
+
+- Solution URL: [Time tracking dashboard solution](https://github.com/Darionas/time-tracking-dashboard)
+- Live Site URL: [Time tracking dashboard live site](https://darionas.github.io/time-tracking-dashboard/)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- TypeScript
+
+### Used techniques:
+
+- BEM
+- Accessibility
+
+But created with :heart:
+
+### What I learned
+
+I have taken TypeScript course and I have used it on this challenge. It was a new experience for me. Data was fetched from JSON file and time tracking dashboard was populated dynamically.
+
+### Continued development
+
+- Start learning Figma.
+
+### Useful resources
+
+- [TypeScript course](https://www.youtube.com/watch?v=yba10v2F5TI&list=PL1BztTYDF-QNrddrcvejiw5vxSZSPIRfn) - Easy to learn, with live examples.
+- [Git & GitHub](https://www.youtube.com/watch?v=3RjQznt-8kE&list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR&index=1)- Live Git and GitHub course for beginners.
+
+## Author
+
+- Frontend Mentor - [@Darionas](https://www.frontendmentor.io/profile/Darionas)
+- GitHub - [Darionas](https://github.com/Darionas)
+
+## Acknowledgments
+
+- Thank you Frontend Mentor team for opportunity to try, practice, train yourself in different level challenges and gain invaluable experience.
