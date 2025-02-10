@@ -44,13 +44,19 @@ async function updateActivities() {
 function renderActivities(timeData: any) {
     activities.innerHTML = '';
     /*---For better Accesebility is created tabindex--------*/
-    /*There are 6 activities with itself and one more tab element and plus three activity periods (start at 0)*/
-    let num: number = timeData.length * 2 + 2;
+    /*There are 6 activities with itself and one more tab element and plus three activity periods*/
+    let num: number = timeData.length * 2 + 3;
+    console.log(timeData.length);
     let i: number = num;
-    let evensNum = Array.from({ length: Math.floor((num - 2) / 2) }, (_, i) => (i + 2) * 2); 
-    let oddsNum = Array.from({ length: Math.floor((num - 3) / 2) + 1 }, (_, i) => (i * 2) + 3);
+    let evensNum: number[] = Array.from({ length: Math.floor((15 - 4) / 2) + 1 }, (_, i) => 4 + i * 2); 
+    let oddsNum: number[] = Array.from({ length: Math.floor((15 - 5) / 2) + 1 }, (_, i) => 5 + i * 2);
+   
     let startOdds: number = 0;
     let startEvens: number = 0;
+    
+    console.log(evensNum);
+    console.log(oddsNum);
+    
     /*-----------------------------*/
         
     timeData.forEach((data: SpendTime) => {
@@ -61,13 +67,13 @@ function renderActivities(timeData: any) {
         let previousHours: string = previous === 1 ? 'hr' : 'hrs';
         
         let template = `
-            <div class="activity activity--${activityTitle}" tabindex=${oddsNum[startOdds++]}>
+            <div class="activity activity--${activityTitle}" tabindex=${evensNum[startEvens++]}>
                 <div class="activity__title activity__title--${activityTitle}">
                     <img class="activity__image" src="images/icon-${activityTitle}.svg" alt="${activityTitle}"/>
                 </div>
                 <div class="activity__data">
                     <p class="activity__desc">${data.title}</p>
-                    <p class="activity__info"><img class="dots" src="images/icon-ellipsis.svg" alt="" role="button" tabindex=${evensNum[startEvens++]} aria-label="More options for ${activityTitle}" /> </p>
+                    <button class="activity__info" tabindex=${oddsNum[startOdds++]}><img class="dots" src="images/icon-ellipsis.svg" alt="" aria-label="More options for ${activityTitle}" /> </button>
                     <p class="activity__current">${current}${currentHours}</p>
                     <p class="activity__previous">Last ${period} - ${previous}${previousHours}</p>
                 </div>
