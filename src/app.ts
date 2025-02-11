@@ -56,7 +56,7 @@ function renderActivities(timeData: any) {
                     <img class="activity__image" src="images/icon-${activityTitle}.svg" alt="${activityTitle}"/>
                 </div>
                 <div class="activity__data">
-                    <p class="activity__desc">${data.title}</p>
+                    <h3 class="activity__desc">${data.title}</h3>
                     <button class="activity__info"><img class="dots" src="images/icon-ellipsis.svg" role="presentation" alt="" aria-label="More options for ${activityTitle}" /> </button>
                     <p class="activity__current">${current}${currentHours}</p>
                     <p class="activity__previous">Last ${period} - ${previous}${previousHours}</p>
