@@ -180,8 +180,9 @@ body {
 }
 
 .activity__title {
+    display: grid;
     border-radius: 0.7rem;
-    place-items: end;
+    justify-items: end;
     overflow: hidden;
 }
 
