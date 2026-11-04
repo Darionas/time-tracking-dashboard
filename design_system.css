@@ -1,0 +1,255 @@
+header {
+    padding: 6rem 5rem 0rem;
+}
+
+h1{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+main {
+    padding: 3rem 5rem 2rem;
+}
+
+/* COLORS */
+h2 {
+    font-size: 2rem;
+    font-weight: bold;  
+    margin-block: 2.5rem;
+}
+
+.colors__wrapper {
+    display: grid;
+    gap: 4.5rem;
+}
+
+.colors__pallet, .color__title {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem; 
+}
+
+.colors__pallet > div {
+    flex: 0 1 18rem;
+}
+
+.color__title {
+    border-bottom: 1px solid var(--clr-grey-200);
+    width: 100%;
+}
+
+.color__container {
+    /* width: 20rem; */
+    height: 5rem;
+    border-radius: 0.5rem; 
+    margin-block: 1rem;
+}
+
+.color__container--white {
+    border: 1px solid var(--clr-grey-200);
+}
+
+.white {
+    background-color: var(--clr-white);
+}
+
+.black {
+    background-color: var(--clr-black);
+}
+
+.navy-950 {
+    background-color: var(--clr-navy-950);
+}
+        
+.navy-900 {
+    background-color: var(--clr-navy-900);
+}
+
+.navy-800 {
+    background-color: var(--clr-navy-800);
+}
+
+.navy-200 {
+    background-color: var(--clr-navy-200);
+}
+
+.orange-300 {
+    background-color: var(--clr-orange-300);
+}
+
+.purple-700 {
+    background-color: var(--clr-purple-700);
+}
+
+.purple-600 {
+    background-color: var(--clr-purple-600);
+}
+
+.purple-500 {
+    background-color: var(--clr-purple-500);
+}
+
+.blue-300 {
+    background-color: var(--clr-blue-300);
+}
+
+.pink-400 {
+    background-color: var(--clr-pink-400);
+}
+
+.green-400 {
+    background-color: var(--clr-green-400);
+}
+
+.yellow-300 {
+    background-color: var(--clr-yellow-300);
+}
+
+.grey-200 {
+    background-color: var(--clr-grey-200);
+}
+
+h3 {
+    font-size: var(--fs-24);
+    margin-block-end: 1rem;
+    width: 20rem;
+}
+
+h4 {
+    margin-bottom: 1.5rem;
+}
+
+.color__info {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.grey__text {
+    color: var(--clr-grey-200);
+    margin-inline-end: 1rem;
+}
+
+/* TYPOGRAPHY */
+.text__preset-container {
+    border-bottom: 1px solid var(--clr-grey-200);
+    padding-block: 1rem;
+}
+
+.text__preset-title {
+    color: #4E6E7E;
+    font-size: var(--fs-15);
+    font-weight: bold;
+}
+
+.text__preset-title > span{
+    color: #133041;
+    margin-inline-start: 1rem;
+}
+
+.text__preset-data {
+    display: flex;
+    gap: 1rem;
+    color: #133041;
+    opacity: 0.75;
+}
+
+.text__preset {
+    padding-block-start: 1rem;
+}
+
+.typo__container > div {
+    margin-bottom: 2rem;
+}
+
+/* SPACING */
+.spacing__item {
+    display: flex;
+    gap: 8rem;
+    padding-block: 2.5rem;
+}
+
+.spacing__bar {
+    background-color: var(--clr-grey-200);
+    height: 2rem;
+}
+
+.spacing-0 {
+    padding-inline: var(--spacing-0);
+}
+.spacing-100 {
+    padding-inline: var(--spacing-100);
+}
+.spacing-200 {
+    padding-inline: var(--spacing-200);
+}
+.spacing-300 {
+    padding-inline: var(--spacing-300);
+}
+.spacing-400 {
+    padding-inline: var(--spacing-400);
+}
+.spacing-500 {
+    padding-inline: var(--spacing-500);
+}
+
+/* COMPONENTS */
+.components__wrapper {
+    display: flex;
+    gap: 2rem;
+}
+
+.components__column {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    gap: 2rem;
+}
+
+.component__content {
+    border: 1px dashed var(--clr-blue-300);
+    border-radius: 5px;
+}
+
+.component__content--activity {
+    display: flex;
+    gap: 2rem;
+    padding: calc(4.25rem + 2.8rem) 3.45rem 4.25rem;
+}
+
+.activity__card--active {
+    background-color: var(--clr-navy-800);
+}
+
+.activity__btn--active {
+    background-color: var(--clr-navy-800);
+}
+
+.activity__menu--active > .oval {
+    background-color: var(--clr-white);
+}   
+
+.component__content--buttons {
+    display: flex;
+    gap: 2rem;
+    padding: 4.25rem 3.45rem;
+}
+
+.activity__btn {
+    width: 100%;
+    max-width: 16rem;
+    padding: 0.5rem 1rem;
+}
+
+.component__content--time {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding: 4.25rem 3.45rem;
+}
+
+.timing__filter-btn--active {
+    color: var(--clr-white);
+}
+
+.active:hover {
+    color: var(--clr-white);
+}

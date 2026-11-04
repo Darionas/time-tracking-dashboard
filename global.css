@@ -1,0 +1,234 @@
+
+:root {
+    /* COLORS PALLETE */
+    --clr-white: #ffffff;
+    --clr-black: #000000;
+    --clr-navy-950: #0e1323;
+    --clr-navy-900: #1c204b;
+    --clr-navy-800: #33397a;
+    --clr-navy-200: #bbc0ff;
+    --clr-orange-300: #ff8b64;
+    --clr-purple-700: #7335d2;
+    --clr-purple-600: #5747ea;
+    --clr-purple-500: #7078c9;
+    --clr-blue-300: #55c2e6;
+    --clr-pink-400: #ff5e7d;
+    --clr-green-400: #4bcf82;
+    --clr-yellow-300: #f1c75b;
+    --clr-grey-200: #d8d8d8;
+
+    /* TYPOGRAPHY */
+    --ff-primary: "Rubik", sans-serif;
+    
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+
+    --fs-56: 3.5rem;
+    --fs-40: 2.5rem;
+    --fs-32: 2rem;
+    --fs-24: 1.5rem;
+    --fs-18: 1.125rem;
+    --fs-15: 0.9375rem;
+
+    --lh-66: 4.125rem;
+    --lh-47: 2.9375rem;
+    --lh-38: 2.375rem;
+    --lh-28: 1.75rem;
+    --lh-21: 1.3125rem;
+    --lh-18: 1.125rem;
+
+    --ls-0: 0;
+
+    /* SPACING */
+    --spacing-0: 0;
+    --spacing-100: 0.5rem; /* 8px */
+    --spacing-200: 1rem; /* 16px */
+    --spacing-300: 1.5rem; /* 24px */
+    --spacing-400: 2rem; /* 32px */
+    --spacing-500: 2.5rem; /* 40px */
+
+}
+
+
+.text__preset-1 {
+    font-size: var(--fs-56);
+    line-height: var(--lh-66);
+    font-weight: var(--fw-light);
+    letter-spacing: var(--ls-0);
+}
+
+.text__preset-2 {
+    font-size: var(--fs-40);
+    line-height: var(--lh-47);
+    font-weight: var(--fw-light);
+    letter-spacing: var(--ls-0);
+}
+
+.text__preset-3 {
+    font-size: var(--fs-32);
+    line-height: var(--lh-38);
+    font-weight: var(--fw-light);
+    letter-spacing: var(--ls-0);
+}
+
+.text__preset-4 {
+    font-size: var(--fs-24);
+    line-height: var(--lh-28);
+    font-weight: var(--fw-light);
+    letter-spacing: var(--ls-0);
+}
+.text__preset-5M {
+    font-size: var(--fs-18);
+    line-height: var(--lh-21);
+    font-weight: var(--fw-medium);
+    letter-spacing: var(--ls-0);
+}
+
+.text__preset-5R {
+    font-size: var(--fs-18);
+    line-height: var(--lh-21);
+    font-weight: var(--fw-regular);
+    letter-spacing: var(--ls-0);
+}
+
+.text__preset-6 {
+    font-size: var(--fs-15);
+    line-height: var(--lh-18);
+    font-weight: var(--fw-regular);
+    letter-spacing: var(--ls-0);
+}
+
+/* COMPONENTS */
+/* ACTIVITY CARD */
+.activity__card {
+    position: relative;
+    width: 100%;
+    max-width: 16rem;
+    padding: 2rem;
+    color: var(--clr-white);
+    background-color: var(--clr-navy-900);
+    border-radius: 15px;
+}
+
+.activity__image {
+    position: absolute;
+    top: -2.8rem;
+    left: 0;
+    border-radius: 15px;
+    width: 100%;
+    height: 10rem;
+    background-color: var(--clr-orange-300);
+    z-index: -100;
+    overflow: hidden;
+}
+
+.activity__icon {
+    position: absolute;
+    top: -0.7rem;
+    right: 1rem;
+}
+
+.activity__btn {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-block-end: 1.5rem;
+    background-color: var(--clr-navy-900);
+    border: none;
+    color: var(--clr-white);
+    cursor: pointer;
+}
+
+.activity__menu {
+    display: flex;
+    gap: 3px;
+    font-size: var(--fs-15);
+}
+
+.oval {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--clr-navy-200);
+}
+
+.activity__total-hours {
+    color: var(--clr-navy-200);
+}
+
+
+/* TIMING FILTER CARD */
+.timing__card {
+    width: 100%;
+    max-width: 16rem;
+    /* max-height: 32.5rem; */
+    background-color: var(--clr-navy-900);
+    border-radius: 15px;
+}
+
+.avatar__container {
+    display: grid;
+    gap: 2.5rem;
+    width: 100%;
+    background-color: var(--clr-purple-600);
+    border-radius: 15px;
+    padding: 2rem 0 5.75rem 2rem;
+}
+
+.avatar__image {
+    width: 4.9rem;
+    height: 4.9rem;
+}
+
+.avatar__owner {
+    color: var(--clr-white);
+}
+
+.avatar__pre-text {
+    color: var(--clr-navy-200);
+}
+
+.timing__filter {
+    display: grid;
+    gap: 1.3rem;
+    justify-content: start;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.timing__filter-btn {
+    text-align: start;
+    background-color: var(--clr-navy-900);
+    border: none;
+    color: var(--clr-navy-200);
+    cursor: pointer;
+}
+
+body {
+    font-family: var(--ff-primary);
+    color: var(--clr-black);
+    font-size: var(--fs-18); /* Default font size */
+}
+
+
+
+
+
+
+/* FOOTER */
+.attribution { 
+    font-size: 0.6875rem;
+    position: relative;
+    bottom: 0;
+    margin-top: 2rem;
+    padding: .5rem;
+    text-align: center;
+    color: rgb(3, 146, 248);
+    width: 75%;
+    margin-inline: auto;
+}
+
+.attribution a { color: hsl(228, 45%, 44%)};
