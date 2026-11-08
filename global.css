@@ -100,12 +100,68 @@
 }
 
 /* COMPONENTS */
-/* ACTIVITY CARD */
+/* DASHBOARD SIDEBAR */
+.dashboard__sidebar {
+    background-color: var(--clr-navy-900);
+    border-radius: 15px;
+}
+
+
+.avatar__container {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-300); /* 2.5rem */
+    width: 100%;
+    background-color: var(--clr-purple-600);
+    border-radius: 15px;
+    padding: var(--spacing-400);
+}
+
+.avatar__image {
+    width: 4rem;
+    height: 4rem;
+    border: 2px solid var(--clr-white);
+    border-radius: 50%;
+}
+
+.avatar__owner {
+    color: var(--clr-white);
+}
+
+.avatar__pre-text {
+    color: var(--clr-navy-200);
+}
+
+.timing__filter {
+    display: flex;
+    /* align-items: center; */
+    gap: 1.3rem;
+    justify-content: space-between;
+    width: 100%;
+    padding: var(--spacing-400);
+    border-radius: 15px;
+}
+
+.timing__filter-btn {
+    text-align: start;
+    background-color: var(--clr-navy-900);
+    border: none;
+    color: var(--clr-navy-200);
+    cursor: pointer;
+}
+
+/* DASHBOARD CONTENT */
+.dashboard__content { 
+    display: grid;
+    gap: 4.3rem; 
+    margin-block-start: 4.3rem;
+}
+
 .activity__card {
     position: relative;
-    width: 100%;
-    max-width: 16rem;
-    padding: 2rem;
+    /* width: 100%;
+    max-width: 16rem; */
+    /* padding: 2rem; */
     color: var(--clr-white);
     background-color: var(--clr-navy-900);
     border-radius: 15px;
@@ -129,12 +185,18 @@
     right: 1rem;
 }
 
+.activity__content {
+    padding: var(--spacing-300);
+    border: 2px solid var(--clr-navy-900);
+    border-radius: 15px;
+}
+
 .activity__btn {
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    margin-block-end: 1.5rem;
+    margin-block-end: var(--spacing-300);
     background-color: var(--clr-navy-900);
     border: none;
     color: var(--clr-white);
@@ -154,68 +216,24 @@
     background-color: var(--clr-navy-200);
 }
 
+.activity__tracking-time {
+    display: flex;
+    gap: 4.4rem;
+    align-items: center;
+    width: 100%;
+}
+
 .activity__total-hours {
     color: var(--clr-navy-200);
+    text-align: end;
 }
 
-
-/* TIMING FILTER CARD */
-.timing__card {
-    width: 100%;
-    max-width: 16rem;
-    /* max-height: 32.5rem; */
-    background-color: var(--clr-navy-900);
-    border-radius: 15px;
-}
-
-.avatar__container {
-    display: grid;
-    gap: 2.5rem;
-    width: 100%;
-    background-color: var(--clr-purple-600);
-    border-radius: 15px;
-    padding: 2rem 0 5.75rem 2rem;
-}
-
-.avatar__image {
-    width: 4.9rem;
-    height: 4.9rem;
-}
-
-.avatar__owner {
-    color: var(--clr-white);
-}
-
-.avatar__pre-text {
-    color: var(--clr-navy-200);
-}
-
-.timing__filter {
-    display: grid;
-    gap: 1.3rem;
-    justify-content: start;
-    width: 100%;
-    padding: 2rem;
-    border-radius: 15px;
-}
-
-.timing__filter-btn {
-    text-align: start;
-    background-color: var(--clr-navy-900);
-    border: none;
-    color: var(--clr-navy-200);
-    cursor: pointer;
-}
 
 body {
     font-family: var(--ff-primary);
     color: var(--clr-black);
     font-size: var(--fs-18); /* Default font size */
 }
-
-
-
-
 
 
 /* FOOTER */
