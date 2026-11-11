@@ -24,15 +24,15 @@
     --fw-regular: 400;
     --fw-medium: 500;
 
-    --fs-56: 3.5rem;
-    --fs-40: 2.5rem;
-    --fs-32: 2rem;
-    --fs-24: 1.5rem;
+    --fs-56: clamp(2rem, 5vw, 3.5rem); 
+    --fs-40: clamp(1.5rem, 4vw, 2.5rem); 
+    --fs-32: 2rem; 
+    --fs-24: 1.5rem; 
     --fs-18: 1.125rem;
     --fs-15: 0.9375rem;
 
     --lh-66: 4.125rem;
-    --lh-47: 2.9375rem;
+    --lh-47: clamp(1.75rem, 5vw, 2.9375rem);
     --lh-38: 2.375rem;
     --lh-28: 1.75rem;
     --lh-21: 1.3125rem;
@@ -118,8 +118,8 @@
 }
 
 .avatar__image {
-    width: 4rem;
-    height: 4rem;
+    width: clamp(4rem, 10vw, 4.875rem);
+    height: clamp(4rem, 10vw, 4.875rem);
     border: 2px solid var(--clr-white);
     border-radius: 50%;
 }
@@ -134,7 +134,6 @@
 
 .timing__filter {
     display: flex;
-    /* align-items: center; */
     gap: 1.3rem;
     justify-content: space-between;
     width: 100%;
@@ -159,9 +158,6 @@
 
 .activity__card {
     position: relative;
-    /* width: 100%;
-    max-width: 16rem; */
-    /* padding: 2rem; */
     color: var(--clr-white);
     background-color: var(--clr-navy-900);
     border-radius: 15px;
