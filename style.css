@@ -18,10 +18,36 @@ body {
 .main__content {
     display: grid;
     justify-content: center;
-    /* align-items: center; */
     margin-inline: auto;
     margin-block-start: var(--spacing-400);
     width: 90%;
     max-width: 1200px;
 }
 
+/* TABLET LAYOUT */
+@media (min-width: 40rem) {
+    .dashboard__content {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(12rem, 1fr));
+        gap: var(--spacing-300);
+        margin-block-start: var(--spacing-400);
+    }
+
+    .timing__filter {
+        justify-content: center;
+        gap: var(--spacing-500);
+    } 
+
+    .activity__tracking-time {
+        display: grid;
+        gap: 1rem;
+        justify-items: start;
+    }
+
+    .activity__card {
+       margin-block-start: var(--spacing-500);
+    }
+
+       
+
+}
