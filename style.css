@@ -1,6 +1,10 @@
 
 body {
+    display: grid;
+    align-content: center;
     background-color: var(--clr-navy-950);
+    padding: 0;
+    margin: 0;
 }
 
 .sr-only {
@@ -20,34 +24,82 @@ body {
     justify-content: center;
     margin-inline: auto;
     margin-block-start: var(--spacing-400);
-    width: 90%;
+    width: 95%;
     max-width: 1200px;
 }
 
-/* TABLET LAYOUT */
-@media (min-width: 40rem) {
-    .dashboard__content {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(12rem, 1fr));
-        gap: var(--spacing-300);
-        margin-block-start: var(--spacing-400);
-    }
+/* * {border: 1px solid white}  */
 
-    .timing__filter {
+/* SMALL TABLET LAYOUT */
+@media (min-width: 34rem) {
+     .timing__filter {
         justify-content: center;
         gap: var(--spacing-500);
+    }
+
+    .dashboard__content {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(13rem, 16rem));
+        gap: var(--spacing-300);
+        margin-block-start: var(--spacing-400);
     } 
+
+    .activity__card {
+       margin-block-start: var(--spacing-500);
+    }
 
     .activity__tracking-time {
         display: grid;
         gap: 1rem;
         justify-items: start;
     }
+}
 
-    .activity__card {
-       margin-block-start: var(--spacing-500);
+/* MEDIUM TABLET LAYOUT */
+@media (min-width: 47rem) {
+    .dashboard__content {
+        grid-template-columns: repeat(3, minmax(13rem, 16rem));
+    }  
+}
+
+/* DESKTOP LAYOUT */
+@media (min-width: 61rem) {
+    .dashboard {
+        display: flex;
+        width: 100%;
+        max-width: 1200px;
+        align-items: stretch;
+        gap: var(--spacing-300);
     }
 
-       
+    .dashboard__sidebar {
+        max-width: 16rem;
+        width: 100%;
+        height: 100%;
+    }
 
+    .avatar__container {
+        display: grid;
+        padding-block-end: 7rem;
+    }
+
+    .timing__filter {
+        display: grid;
+        justify-content: start;
+        gap: var(--spacing-300);
+    }
+
+    .dashboard__content {
+        margin-block-start: 0;
+        height: 100%;
+    }
+
+    .activity__card {
+        max-width: 100%;
+        width: 16rem;
+    }
+
+    .activity__content {
+        padding: var(--spacing-300);
+    }
 }
