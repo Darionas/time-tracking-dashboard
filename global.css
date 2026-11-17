@@ -34,7 +34,7 @@
     --fs-15: 0.9375rem;
 
     /* LINE HEIGHTS */
-    --lh-66: 4.125rem;
+    --lh-66: clamp(2.2rem, 7vw, 4.125rem);
     --lh-47: clamp(1.75rem, 5vw, 2.9375rem);
     --lh-38: 2.375rem;
     --lh-28: 1.75rem;
@@ -152,6 +152,10 @@
     cursor: pointer;
 }
 
+.timing__filter-btn:hover {
+    color: var(--clr-white);
+}
+
 /* DASHBOARD CONTENT */
 .dashboard__content { 
     display: grid;
@@ -188,26 +192,39 @@
 
 .activity__content {
     padding: var(--spacing-300);
-    border: 2px solid var(--clr-navy-900);
+    background-color: var(--clr-navy-900);
     border-radius: 15px;
+    height: 100%;
 }
 
-.activity__btn {
+.activity__content:hover {
+    background-color: var(--clr-navy-800);
+}
+
+.activity__menu {
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: space-between;
     margin-block-end: var(--spacing-300);
-    background-color: var(--clr-navy-900);
+    background-color: transparent;
     border: none;
     color: var(--clr-white);
-    cursor: pointer;
 }
 
-.activity__menu {
+.activity__btn {
     display: flex;
     gap: 3px;
     font-size: var(--fs-15);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.activity__btn:hover {
+    .oval {
+        background-color: var(--clr-white);
+    }
 }
 
 .oval {
