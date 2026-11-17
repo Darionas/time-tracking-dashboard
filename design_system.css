@@ -234,15 +234,13 @@ h4 {
 }
 
 .activity__btn {
-    width: 100%;
-    max-width: 16rem;
     padding: 0.5rem 1rem;
 }
 
 .component__content--time {
     display: flex;
     gap: 2rem;
-    align-items: center;
+    align-items: end;
     padding: 4.25rem 3.45rem;
 }
 
