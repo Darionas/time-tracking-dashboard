@@ -28,127 +28,15 @@
                     </div>
                 </div>
                 <div class="timing__filter">
-                    <button class="timing__filter-btn text__preset-5R" type="button">Daily</button>
-                    <button class="timing__filter-btn timing__filter-btn--active text__preset-5R" type="button">Weekly</button>
-                    <button class="timing__filter-btn text__preset-5R" type="button">Monthly</button>
+                    <button class="timing__filter-btn timing__filter-btn--active text__preset-5R" 
+                    type="button" aria-label="View daily statistics" aria-current="page">Daily</button>
+                    <button class="timing__filter-btn text__preset-5R" type="button"
+                    aria-label="View weekly statistics">Weekly</button>
+                    <button class="timing__filter-btn text__preset-5R" type="button"
+                    aria-label="View monthly statistics">Monthly</button>
                 </div>
             </div>
-            <div class="dashboard__content">
-                <div class="activity__card">
-                    <div class="activity__image">
-                        <img class="activity__icon" src="./images/icon-work.svg" alt="" />
-                    </div> 
-                    <div class="activity__content">
-                        <div class="activity__menu">
-                            <p class="activity__btn-title text__preset-5M">Work</p>
-                            <button class="activity__btn">
-                                <p class="oval"></p>
-                                <p class="oval"></p>
-                                <p class="oval"></p>
-                            </button>
-                        </div>
-                        <div class="activity__tracking-time">
-                            <p class="activity__hours text__preset-1">32hrs</p>
-                            <p class="activity__total-hours text__preset-6">Last Week - 36hrs</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="activity__card">
-                    <div class="activity__image">
-                        <img class="activity__icon" src="./images/icon-play.svg" alt="" />
-                    </div> 
-                    <div class="activity__content">
-                        <div class="activity__menu">
-                            <p class="activity__btn-title text__preset-5M">Play</p>
-                            <button class="activity__btn">
-                                <p class="oval"></p>
-                                <p class="oval"></p>
-                                <p class="oval"></p>
-                            </button>
-                        </div>
-                        <div class="activity__tracking-time">
-                            <p class="activity__hours text__preset-1">10hrs</p>
-                            <p class="activity__total-hours text__preset-6">Last Week - 8hrs</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="activity__card">
-                    <div class="activity__image">
-                        <img class="activity__icon" src="./images/icon-work.svg" alt="" />
-                    </div> 
-                    <div class="activity__content">
-                        <div class="activity__menu">
-                            <p class="activity__btn-title text__preset-5M">Work</p>
-                            <button class="activity__btn">
-                                <p class="oval"></p>
-                                <p class="oval"></p>
-                                <p class="oval"></p>
-                            </button>
-                        </div>
-                        <div class="activity__tracking-time">
-                            <p class="activity__hours text__preset-1">32hrs</p>
-                            <p class="activity__total-hours text__preset-6">Last Week - 36hrs</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="activity__card">
-                    <div class="activity__image">
-                        <img class="activity__icon" src="./images/icon-work.svg" alt="" />
-                    </div> 
-                    <div class="activity__content">
-                        <div class="activity__menu">
-                            <p class="activity__btn-title text__preset-5M">Work</p>
-                            <button class="activity__btn">
-                                <p class="oval"></p>
-                                <p class="oval"></p>
-                                <p class="oval"></p>
-                            </button>
-                        </div>
-                        <div class="activity__tracking-time">
-                            <p class="activity__hours text__preset-1">32hrs</p>
-                            <p class="activity__total-hours text__preset-6">Last Week - 36hrs</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="activity__card">
-                    <div class="activity__image">
-                        <img class="activity__icon" src="./images/icon-work.svg" alt="" />
-                    </div> 
-                    <div class="activity__content">
-                        <div class="activity__menu">
-                            <p class="activity__btn-title text__preset-5M">Work</p>
-                            <button class="activity__btn">
-                                <p class="oval"></p>
-                                <p class="oval"></p>
-                                <p class="oval"></p>
-                            </button>
-                        </div>
-                        <div class="activity__tracking-time">
-                            <p class="activity__hours text__preset-1">32hrs</p>
-                            <p class="activity__total-hours text__preset-6">Last Week - 36hrs</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="activity__card">
-                    <div class="activity__image">
-                        <img class="activity__icon" src="./images/icon-work.svg" alt="" />
-                    </div> 
-                    <div class="activity__content">
-                        <div class="activity__menu">
-                            <p class="activity__btn-title text__preset-5M">Work</p>
-                            <button class="activity__btn">
-                                <p class="oval"></p>
-                                <p class="oval"></p>
-                                <p class="oval"></p>
-                            </button>
-                        </div>
-                        <div class="activity__tracking-time">
-                            <p class="activity__hours text__preset-1">32hrs</p>
-                            <p class="activity__total-hours text__preset-6">Last Week - 36hrs</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="dashboard__content" id="dashboard__content-cardContainer"></div>
         </div>
     </main>
     <footer class="attribution">

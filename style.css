@@ -28,7 +28,28 @@ body {
     max-width: 1200px;
 }
 
-/* * {border: 1px solid white}  */
+.activity__work {
+    background-color: var(--clr-orange-300);
+}
+.activity__play {
+    background-color: var(--clr-blue-300);
+}
+.activity__study {
+    background-color: var(--clr-pink-400);
+}
+.activity__exercise {
+    background-color: var(--clr-green-400);
+}
+.activity__social {
+    background-color: var(--clr-purple-700);
+}
+.activity__self-care {
+    background-color: var(--clr-yellow-300);
+}
+
+.timing__filter-btn--active {
+    color: var(--clr-white);
+}
 
 /* SMALL TABLET LAYOUT */
 @media (min-width: 34rem) {

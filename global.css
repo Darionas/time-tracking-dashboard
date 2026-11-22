@@ -152,6 +152,12 @@
     cursor: pointer;
 }
 
+.timing__filter-btn:focus-visible {
+    outline: 2px solid var(--clr-navy-200);
+    outline-offset: 2px;
+    border-radius: 2px;
+} 
+
 .timing__filter-btn:hover {
     color: var(--clr-white);
 }
@@ -177,7 +183,6 @@
     border-radius: 15px;
     width: 100%;
     height: 10rem;
-    background-color: var(--clr-orange-300);
     z-index: -100;
     overflow: hidden;
 }
@@ -221,7 +226,11 @@
     cursor: pointer;
 }
 
+.activity__btn:focus-visible,
 .activity__btn:hover {
+    outline: 2px solid var(--clr-navy-200);
+    outline-offset: 0.2rem;
+    border-radius: 2px;
     .oval {
         background-color: var(--clr-white);
     }
